@@ -1,0 +1,1 @@
+EventLog('System')| summarize countif( (EventID == 7040) ) by Device| where (countif_ > 0)
