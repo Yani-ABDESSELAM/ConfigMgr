@@ -20,7 +20,7 @@ ON
 SMS_G_System_DISK.ResourceID = SMS_R_System.ResourceId
 
 WHERE
-SMS_G_System_DISK.Index > 0
+SMS_G_System_DISK.Index > '0'
 
 ORDER BY
 SMS_R_System.Name
