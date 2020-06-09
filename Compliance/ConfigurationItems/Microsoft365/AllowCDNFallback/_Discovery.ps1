@@ -1,5 +1,5 @@
 # Allow CDN Fallback for Microsoft Office Updates
-# ConfigMgr\Compliance\ConfigurationItems\Microsoft365\AllowCDNFallback\_Detection.ps1
+# ConfigMgr\Compliance\ConfigurationItems\Microsoft365\AllowCDNFallback\_Discovery.ps1
 
 # Author:       Cameron Kollwitz
 # Date:         12/20/2019

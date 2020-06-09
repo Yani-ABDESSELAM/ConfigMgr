@@ -1,5 +1,5 @@
 # Configuration Item: Font - Detection Script
-# _Detection.ps1
+# _Discovery.ps1
 
 # Author: Cameron Kollwitz
 # Date: Jun 08, 2020

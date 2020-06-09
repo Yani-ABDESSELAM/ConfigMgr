@@ -1,5 +1,5 @@
 # Encryption Oracle Remediation
-# _Detection.ps1
+# _Discovery.ps1
 
 # Author: Cameron Kollwitz
 # Date: Jun 06, 2020
