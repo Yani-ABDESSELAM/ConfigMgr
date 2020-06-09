@@ -1,0 +1,1 @@
+Select * from smspackages where pkgid='XXX00000'

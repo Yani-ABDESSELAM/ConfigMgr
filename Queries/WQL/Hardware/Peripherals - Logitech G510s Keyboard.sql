@@ -1,0 +1,1 @@
+select distinct SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client from SMS_R_System INNER JOIN SMS_G_System_USB_DEVICE ON SMS_G_System_USB_DEVICE.ResourceID = SMS_R_System.ResourceId WHERE SMS_G_System_USB_DEVICE.DeviceID LIKE "%VID_046D&PID_C22D%"

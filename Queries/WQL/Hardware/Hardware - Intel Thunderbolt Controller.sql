@@ -1,0 +1,5 @@
+-- By PNP Device ID
+-- SELECT SMS_R_System.ResourceId, SMS_R_System.ResourceType, SMS_R_System.Name, SMS_R_System.SMSUniqueIdentifier, SMS_R_System.ResourceDomainORWorkgroup, SMS_R_System.Client FROM  SMS_R_System INNER JOIN SMS_G_System_PNP_DEVICE_DRIVER ON SMS_G_System_PNP_DEVICE_DRIVER.ResourceId = SMS_R_System.ResourceId WHERE SMS_G_System_PNP_DEVICE_DRIVER.PNPDeviceID LIKE "%DEV_15D9%"
+
+-- By Device Name (Better Query Results!)
+select SMS_R_System.ResourceId, SMS_R_System.ResourceType, SMS_R_System.Name, SMS_R_System.SMSUniqueIdentifier, SMS_R_System.ResourceDomainORWorkgroup, SMS_R_System.Client from  SMS_R_System inner join SMS_G_System_PNP_DEVICE_DRIVER on SMS_G_System_PNP_DEVICE_DRIVER.ResourceID = SMS_R_System.ResourceId where SMS_G_System_PNP_DEVICE_DRIVER.Name like "%Thunderbolt%"
