@@ -1,44 +1,44 @@
 # Begin all ConfigMgr Client Update Cycles
 $CycleClient = 'localhost'
 
-# Application Deployment Evaluation Cycle    
+# Application Deployment Evaluation Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000121}"
 
-# Discovery Data Collection Cycle    
+# Discovery Data Collection Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000003}"
 
-# File Collection Cycle  
+# File Collection Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000010}"
 
-# Hardware Inventory Cycle   
+# Hardware Inventory Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000001}"
 
-# Machine Policy Retrieval Cycle 
+# Machine Policy Retrieval Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000021}"
 
-# Machine Policy Evaluation Cycle    
+# Machine Policy Evaluation Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000022}"
 
-# Software Inventory Cycle   
+# Software Inventory Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000002}"
 
-# Software Metering Usage Report Cycle   
+# Software Metering Usage Report Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000031}"
 
-# Software Update Deployment Evaluation Cycle    
+# Software Update Deployment Evaluation Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000114}"
 
-# Software Update Scan Cycle 
+# Software Update Scan Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000113}"
 
-# State Message Refresh  
+# State Message Refresh
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000111}"
 
-# User Policy Retrieval Cycle    
+# User Policy Retrieval Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000026}"
 
-# User Policy Evaluation Cycle   
+# User Policy Evaluation Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000027}"
 
-# Windows Installers Source List Update Cycle    
+# Windows Installers Source List Update Cycle
 Invoke-WMIMethod -ComputerName $CycleClient -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000032}"
