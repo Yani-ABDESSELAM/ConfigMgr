@@ -1,0 +1,19 @@
+select SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client from SMS_R_System join SMS_G_System_System on SMS_R_System.ResourceID = SMS_G_System_System.ResourceID where SMS_R_System.Name <> SMS_G_System_System.Name
+
+
+~~OR~~
+
+
+select R.ResourceID,R.ResourceType,R.Name,R.SMSUniqueIdentifier,R.ResourceDomainORWorkgroup,R.Client from SMS_R_System as r full join SMS_R_System as s1 on s1.ResourceId = r.ResourceId full join SMS_R_System as s2 on s2.Name = s1.Name where s1.Name = s2.Name and s1.ResourceId != s2.ResourceId and R.Client = null
+
+
+Add all three queries below to a single Device Collection
+
+Duplicate GUID Query#1
+select SMS_R_System.ResourceID,SMS_R_System.ResourceType,SMS_R_System.Name,SMS_R_System.SMSUniqueIdentifier,SMS_R_System.ResourceDomainORWorkgroup,SMS_R_System.Client from SMS_R_System join SMS_GH_System_System on SMS_R_System.ResourceID = SMS_GH_System_System.ResourceID where SMS_R_System.Name <> SMS_GH_System_System.Name
+
+Duplicate GUID Query#2
+select SMS_R_System.ResourceID,SMS_R_System.ResourceType,SMS_R_System.Name,SMS_R_System.SMSUniqueIdentifier,SMS_R_System.ResourceDomainORWorkgroup,SMS_R_System.Client from SMS_R_System join SMS_G_System_System on SMS_R_System.ResourceID = SMS_G_System_System.ResourceID where SMS_R_System.Name <> SMS_G_System_System.Name
+
+Duplicate GUID Query#3
+select SMS_R_System.ResourceID,SMS_R_System.ResourceType,SMS_R_System.Name,SMS_R_System.SMSUniqueIdentifier,SMS_R_System.ResourceDomainORWorkgroup,SMS_R_System.Client from SMS_R_System where SMS_R_System.ResourceID in (select SMS_GH_System_System.ResourceID from SMS_G_System_System join SMS_GH_System_System on SMS_G_System_System.ResourceID = SMS_GH_System_System.ResourceID where SMS_G_System_System.Name <> SMS_GH_System_System.Name)

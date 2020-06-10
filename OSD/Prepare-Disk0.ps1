@@ -2,8 +2,8 @@
 
 $Partitions = (gwmi -Namespace 'ROOT\Cimv2' -Query "SELECT * FROM Win32_DiskDrive WHERE DeviceID Like '%PHYSICALDRIVE0'").Partitions
 
-if($Partitions -gt 0) {
-    exit 0
+if ($Partitions -gt 0) {
+  exit 0
 }
 
 $tsenv = New-Object -COMObject Microsoft.SMS.TSEnvironment
@@ -12,8 +12,8 @@ $IsUefi = $tsenv.Value("_SMSTSBootUEFI").ToLower().Equals("true")
 
 if (!$IsUefi) {
 
-$DPCommands =
-@"
+  $DPCommands =
+  @"
 select disk 0
 clean
 create partition size=350
@@ -30,8 +30,8 @@ set id=27
 
 if ($IsUefi) {
 
-$DPCommands =
-@"
+  $DPCommands =
+  @"
 select disk 0
 clean
 convert gpt

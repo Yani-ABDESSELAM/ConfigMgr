@@ -1,0 +1,1 @@
+select SMS_R_User.ResourceId, SMS_R_User.ResourceType, SMS_R_User.Name, SMS_R_User.UniqueUserName, SMS_R_User.WindowsNTDomain from  SMS_R_User where SMS_R_User.UserName not like "SVC%"

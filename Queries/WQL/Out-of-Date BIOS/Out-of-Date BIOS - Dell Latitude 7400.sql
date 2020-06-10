@@ -1,0 +1,2 @@
+-- Out-Of-Date-BIOS | Dell Latitude 7400
+select SMS_R_SYSTEM.ResourceID,SMS_R_SYSTEM.ResourceType,SMS_R_SYSTEM.Name,SMS_R_SYSTEM.SMSUniqueIdentifier,SMS_R_SYSTEM.ResourceDomainORWorkgroup,SMS_R_SYSTEM.Client from SMS_R_System inner join SMS_G_System_PC_BIOS on SMS_G_System_PC_BIOS.ResourceID = SMS_R_System.ResourceId where SMS_G_System_PC_BIOS.SMBIOSBIOSVersion < "A02" and SMS_R_System.Client = "1" and SMS_R_System.Obsolete = "0"
