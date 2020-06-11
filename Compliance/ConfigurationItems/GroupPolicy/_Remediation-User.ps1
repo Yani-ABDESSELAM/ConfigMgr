@@ -5,5 +5,5 @@
 # Date: Jun 11, 2020
 
 # Removes the broken Group Policy file and triggers a Group Policy update on the device.
-Remove-Item C:\Windows\System32\GroupPolicy\User\Registry.pol -Force -Verbose
-Write-Host y | Invoke-GPUpdate -Force
+Remove-Item C:\Windows\System32\GroupPolicy\User\Registry.pol -Verbose -Force
+gpupdate.exe /force
