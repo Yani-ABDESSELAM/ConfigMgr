@@ -7,7 +7,7 @@
 
 ## Specify the Update Channel
 # List of the Update Channels: <https://docs.microsoft.com/en-us/deployoffice/office-deployment-tool-configuration-options#channel-attribute-part-of-updates-element>
-$UpdateChannelName = "SemiAnnual" # Valid options are: MonthlyEnterprise, Current, CurrentPreview, SemiAnnual, SemiAnnualPreview, BetaChannel
+$UpdateChannelName = "Read-Host" # Valid options are: MonthlyEnterprise, Current, CurrentPreview, SemiAnnual, SemiAnnualPreview, BetaChannel
 Switch ($UpdateChannelName) {
   "MonthlyEnterprise" {
     # Monthly Enterprise Channel
