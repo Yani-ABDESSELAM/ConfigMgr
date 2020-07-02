@@ -1,0 +1,3 @@
+-- Verify ConfigMgr Database Integrity
+-- Useful for issues such as "stuck" policies...
+SELECT * FROM ResPolicyMap WHERE machineid = 0 and PADBID IN (SELECT PADBID FROM PolicyAssignment WHERE BodyHash IS NULL)
